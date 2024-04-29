@@ -8,10 +8,12 @@
 
 ## Деплой инстанса GeoMesa + запросы 
 Для сборки инстанса для работы с бд можно воспользоваться проектом GeoDocker-GeoMessa
+
 `
     git clone git@github.com:geodocker/geodocker-geomesa.git
 `
 Там уже есть готовый `docker-compose` для поднятия небольшого кластера из HDFS, Zookeeper, Accumulo and GeoServer.
+
 `
     cd geodocker-geomesa/geodocker-accumulo-geomesa
     docker-compose up
@@ -30,6 +32,7 @@
 ![example.csv](../images/example.png)
 
 Далее нам необходимо выполнить команду:
+
 `
     cd /opt/geomesa/bin
     geomesa-accumulo ingest -C example-csv -c example -u root -p GisPwd -s example-csv ../examples/ingest/csv/example.csv
@@ -38,6 +41,7 @@
 Команда `ingest` отвечает за конвертацию различных файлов в GeoMesa. Здесь мы создаем используем конвертер `example-csv`, табличный каталог `example`, какой пользователь это делает, в нашем случае из под `root`, пароль, ну и сам файл.
 
 Можем посмотреть на данные:
+
 `
     geomesa-accumulo export -c example -u root -p GisPwd -f example-csv 
 `
