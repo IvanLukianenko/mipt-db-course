@@ -1,4 +1,3 @@
-Disclamer: Презентация лежит по ссылке [тут][https://docs.google.com/presentation/d/1SGlwLqNVw-BEB36LAadl-SQlVvgcyG11T6YStBPo34w/edit?usp=sharing]. Демонстрация разворачивание базы данных и работы с ней в директории GeoMesa/demo
 # Здесь я расскажу про демонстрация работу с GeoMesa
 
 ## План
