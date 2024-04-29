@@ -12,6 +12,7 @@
 `
     git clone git@github.com:geodocker/geodocker-geomesa.git
 `
+
 Там уже есть готовый `docker-compose` для поднятия небольшого кластера из HDFS, Zookeeper, Accumulo and GeoServer.
 
 `
@@ -32,6 +33,7 @@
 
 В контейнере у нас изначально есть несколько примеров данных, которые можно поиспользовать в качестве примеров работы: 
 Пасхалка для любителей Гарри Поттера в `/opt/geomesa/examples/ingest/csv/example.csv`
+
 ![example.csv](../images/example.png)
 
 Далее нам необходимо выполнить команду:
@@ -48,6 +50,7 @@
 `
     geomesa-accumulo export -c example -u root -p GisPwd -f example-csv 
 `
+
 ![export](../images/export.png)
 
 Теперь какие запросы можно делать с помощью CLI-tools
@@ -86,6 +89,7 @@
 Создание индексов:
 
 `geomesa-accumulo add-index -u root -p GisPwd --index attr -c example -f example-csv `
+
 Посмотрим на индексы, которые добавили 
 
 ![Indecies](../images/indecies.png)
