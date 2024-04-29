@@ -18,15 +18,18 @@
     cd geodocker-geomesa/geodocker-accumulo-geomesa
     docker-compose up
 `
+
 Здесь мы с вами подняли 7 контейнеров:
 ![Containers](../images/containers.png)
 
 Нас интересует Accumulo master instance, тк туда ставятся CLI тулзы для работы с базой данных
 
 Заходим в интерактивном режиме с bash в контейнер 
+
 `
     docker exec -ti geodocker-accumulo-geomesa-accumulo-master-1 bash
 `
+
 В контейнере у нас изначально есть несколько примеров данных, которые можно поиспользовать в качестве примеров работы: 
 Пасхалка для любителей Гарри Поттера в `/opt/geomesa/examples/ingest/csv/example.csv`
 ![example.csv](../images/example.png)
