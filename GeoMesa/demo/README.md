@@ -47,6 +47,19 @@
 `
 ![export](../images/export.png)
 
+Теперь какие запросы можно делать с помощью CLI-tools
+
+Команда  `export` дает возможность писать CQL предикаты для запросов к существующим схемам
+
+Посмотрим на примеры: 
+
+1) Атрибутный
+![Severus](../images/severus_cql.png)
+2) Временной
+![Last seen](../images/lastseen.png)
+3) Простраснтвенный
+![Contains](../images/contains.png)
+
 ## WebUI
 
 Давайте теперь взглянем на UI, который у нас есть из коробки. GeoServer разворачивается на порту `9090`, заходим по `http://localhost:9090/geoserver/web/`
@@ -65,3 +78,12 @@
 
 Вот что у нас получается: 
 ![OpenLayer viewer](../images/OLv.png)
+
+## Индексы
+Создание индексов:
+
+`geomesa-accumulo add-index -u root -p GisPwd --index attr -c example -f example-csv `
+Посмотрим на индексы, которые добавили 
+
+![Indecies](../images/indecies.png)
+
